@@ -7,12 +7,12 @@
 <script type="text/javascript" charset="utf-8">
 $(function () {
   $(".next").on('click', function() {
-    var id = document.getElementById('productId').value;
+    var id = document.getElementById('productId').value + 1;
     $.get("/products/" + id + "/data", function(data) {
       $("#name").value(data.name);
-      $("#name").value(data.description);
-      $("#name").value(data.inventory);
-      $("#name").value(data.price);
+      $("#description").value(data.description);
+      $("#inventory").value(data.inventory);
+      $("#price").value(data.price);
     });
   });
 });
