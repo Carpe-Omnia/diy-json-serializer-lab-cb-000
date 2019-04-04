@@ -1,14 +1,18 @@
 <h3 id="name"><%= product.name %></h3>
-<div id="product-<%= product.id %>"><%= truncate(product.description) %></div>
+<div id="productId"<%= product.id %> </div>
+<div id="description"><%= truncate(product.description) %></div>
 <div id="inventory" > <%= @product.inventory %> </div>
 <div id="price" > <%= @product.price %> </div>
 <button class="next" data-id="<%= product.id %>">More Info</button>
 <script type="text/javascript" charset="utf-8">
 $(function () {
   $(".next").on('click', function() {
-    var id = $(this).data("id");
-    $.get("/products/" + id + "/post_data", function(data) {
-      $("#body-" + id).text(data);
+    var id = document.getElementById('productId').value;
+    $.get("/products/" + id + "/data", function(data) {
+      $("#name").value(data.name);
+      $("#name").value(data.description);
+      $("#name").value(data.inventory);
+      $("#name").value(data.price);
     });
   });
 });
