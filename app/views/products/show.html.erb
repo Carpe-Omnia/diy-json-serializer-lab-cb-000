@@ -9,10 +9,11 @@ $(function () {
   $(".next").on('click', function() {
     var id = document.getElementById('productId').value + 1;
     $.get("/products/" + id + "/data", function(data) {
-      $("#name").value(data.name);
-      $("#description").value(data.description);
-      $("#inventory").value(data.inventory);
-      $("#price").value(data.price);
+      $("#name").value = data.name;
+      $("#description").value = data.description;
+      $("#inventory").value = data.inventory;
+      $("#price").value = data.price;
+      $("#productId").value = data.productId;
     });
   });
 });
