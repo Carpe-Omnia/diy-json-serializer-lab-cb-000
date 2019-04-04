@@ -1,5 +1,7 @@
 <h3><%= product.name %></h3>
 <div id="product-<%= product.id %>"><%= truncate(product.description) %></div>
+<div id="inventory" > <%= @product.inventory %> </div>
+<div id="price" > <%= @product.price %> </div>
 <button class="next" data-id="<%= product.id %>">More Info</button>
 <script type="text/javascript" charset="utf-8">
 $(function () {
