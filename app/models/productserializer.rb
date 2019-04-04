@@ -7,7 +7,7 @@ class ProductSerializer
     json += "'price': '#{product.price}', "
     json += "'inventory': '#{product.description}', "
     json += "'description': '#{product.description}'"
-    json += "}"
+    json += " }"
     return json
   end
 end
