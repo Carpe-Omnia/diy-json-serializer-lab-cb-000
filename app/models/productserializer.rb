@@ -1,3 +1,4 @@
 class ProductSerializer
-
-end   
+  def initialize()
+  end
+end
