@@ -12,7 +12,9 @@ class ProductsController < ApplicationController
     product = Product.find(params[:id])
     render plain: product.description
   end
-
+  def show
+    @product = Product.find_by(id: params["id"])
+  end
   def new
     @product = Product.new
   end
