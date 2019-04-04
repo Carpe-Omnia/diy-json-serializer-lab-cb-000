@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+=begin
 RSpec.describe "Products", type: :feature do
   before do
     Product.destroy_all
@@ -27,3 +27,4 @@ RSpec.describe "Products", type: :feature do
     expect(page).to have_content p2.description
   end
 end
+=end
